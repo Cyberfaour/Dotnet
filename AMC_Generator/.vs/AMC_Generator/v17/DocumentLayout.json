@@ -1,0 +1,258 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\controllers\\amcscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:controllers\\amcscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\services\\amcpdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:services\\amcpdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Migrations\\20250502214459_initialcreate-06.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250502214459_initialcreate-06.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\views\\amcs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:views\\amcs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\controllers\\ownerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:controllers\\ownerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\models\\amc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:models\\amc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Migrations\\20250502212512_initialcreate-05.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250502212512_initialcreate-05.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\views\\owners\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:views\\owners\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\views\\owners\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:views\\owners\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\views\\owners\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:views\\owners\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\views\\owners\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:views\\owners\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\views\\owners\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:views\\owners\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\views\\amcs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:views\\amcs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|f:\\personal work\\work\\excersises\\function testing\\amc_generator\\models\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8196E2E6-57F4-40A7-99F3-73C66F854881}|AMC_Generator.csproj|solutionrelative:models\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AMCPDFService.cs",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Services\\AMCPDFService.cs",
+              "RelativeDocumentMoniker": "Services\\AMCPDFService.cs",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Services\\AMCPDFService.cs",
+              "RelativeToolTip": "Services\\AMCPDFService.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAuwFcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T21:49:55.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250502214459_initialcreate-06.cs",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Migrations\\20250502214459_initialcreate-06.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250502214459_initialcreate-06.cs",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Migrations\\20250502214459_initialcreate-06.cs",
+              "RelativeToolTip": "Migrations\\20250502214459_initialcreate-06.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T21:44:59.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\AMCs\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\AMCs\\Index.cshtml",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\AMCs\\Index.cshtml",
+              "RelativeToolTip": "Views\\AMCs\\Index.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAqwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T21:38:06.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AMCsController.cs",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Controllers\\AMCsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AMCsController.cs",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Controllers\\AMCsController.cs",
+              "RelativeToolTip": "Controllers\\AMCsController.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAuwLwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T21:36:58.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AMC.cs",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Models\\AMC.cs",
+              "RelativeDocumentMoniker": "Models\\AMC.cs",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Models\\AMC.cs",
+              "RelativeToolTip": "Models\\AMC.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T21:36:25.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250502212512_initialcreate-05.cs",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Migrations\\20250502212512_initialcreate-05.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250502212512_initialcreate-05.cs",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Migrations\\20250502212512_initialcreate-05.cs",
+              "RelativeToolTip": "Migrations\\20250502212512_initialcreate-05.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T21:25:12.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owners\\Edit.cshtml",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Owners\\Edit.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAApwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T21:24:53.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owners\\Details.cshtml",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Details.cshtml",
+              "RelativeToolTip": "Views\\Owners\\Details.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAApwBgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T21:24:45.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owners\\Delete.cshtml",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Owners\\Delete.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAApwBkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T21:24:34.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owners\\Create.cshtml",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Create.cshtml",
+              "RelativeToolTip": "Views\\Owners\\Create.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T21:24:28.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owners\\Index.cshtml",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\Owners\\Index.cshtml",
+              "RelativeToolTip": "Views\\Owners\\Index.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAArwDMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T21:24:16.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Owner.cs",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Models\\Owner.cs",
+              "RelativeDocumentMoniker": "Models\\Owner.cs",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Models\\Owner.cs",
+              "RelativeToolTip": "Models\\Owner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T21:23:30.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OwnersController.cs",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Controllers\\OwnersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OwnersController.cs",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Controllers\\OwnersController.cs",
+              "RelativeToolTip": "Controllers\\OwnersController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADgAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T21:23:05.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\AMCs\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\AMCs\\Create.cshtml",
+              "ToolTip": "F:\\personal work\\work\\Excersises\\Function Testing\\AMC_Generator\\Views\\AMCs\\Create.cshtml",
+              "RelativeToolTip": "Views\\AMCs\\Create.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T21:18:56.914Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

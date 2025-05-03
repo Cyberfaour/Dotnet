@@ -1,0 +1,172 @@
+﻿@model AMC_Generator.Models.AMC
+@{
+    ViewData["Title"] = "New Annual Maintenance Contract";
+    var buildings = (IEnumerable<AMC_Generator.Models.Building>)ViewBag.Buildings;
+}
+
+<!-- Bootstrap icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<div class="card shadow-sm">
+    <div class="card-header text-center fw-bold">
+        Create Annual Maintenance Contract
+    </div>
+
+    <div class="card-body">
+        <form asp-action="Create" method="post" class="row g-4">
+            @Html.AntiForgeryToken()
+
+            <!-- ===== Building selector ===== -->
+            <div class="col-md-6">
+                <label class="form-label fw-bold"><i class="bi bi-building"></i> Building</label>
+                <div class="input-group">
+                    <select id="buildingSelector" asp-for="BuildingId" class="form-select" required>
+                        <option value="">Select building…</option>
+                        @foreach (var b in buildings)
+                        {
+                            <option value="@b.Id">@b.Name</option>
+                        }
+                    </select>
+                    <button type="button" class="btn btn-outline-primary"
+                            data-bs-toggle="modal" data-bs-target="#quickAddModal">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+                <span asp-validation-for="BuildingId" class="text-danger"></span>
+            </div>
+
+            <!-- ===== Auto‑filled owner info ===== -->
+            <div class="col-12">
+                <div class="border rounded p-3 bg-light">
+                    <p class="mb-1"><strong>Owner:</strong> <span id="ownerName" class="text-primary"></span></p>
+                    <p class="mb-1"><strong>Phone:</strong> <span id="ownerPhone" class="text-primary"></span></p>
+                    <p class="mb-0"><strong>Address:</strong> <span id="buildingAddress" class="text-primary"></span></p>
+                </div>
+            </div>
+
+            <!-- ===== Contract details ===== -->
+            <div class="col-md-4">
+                <label asp-for="AMCValue" class="form-label fw-bold"></label>
+                <div class="input-group">
+                    <span class="input-group-text">AED</span>
+                    <input asp-for="AMCValue" class="form-control" required />
+                </div>
+                <span asp-validation-for="AMCValue" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-4">
+                <label asp-for="StartDate" class="form-label fw-bold"></label>
+                <input asp-for="StartDate" type="date" class="form-control" required />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-4">
+                <label asp-for="EndDate" class="form-label fw-bold"></label>
+                <input asp-for="EndDate" type="date" class="form-control" required />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+
+            <!-- PdfPath hidden (set server‑side) -->
+            <input asp-for="PdfPath" type="hidden" />
+
+            <div class="col-12 text-center">
+                <button class="btn btn-success px-4">
+                    <i class="bi bi-file-earmark-pdf"></i> Save &amp; Generate PDF
+                </button>
+                <a asp-action="Index" class="btn btn-secondary px-4">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ===== Quick‑add modal ===== -->
+<div class="modal fade" id="quickAddModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">Add Building &amp; Owner</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="quickAddForm" class="row g-3">
+                    <!-- Owner -->
+                    <div class="col-md-4">
+                        <label class="form-label">Owner name *</label>
+                        <input name="OwnerFullName" class="form-control" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Code</label>
+                        <input name="OwnerPhoneCode" value="+971" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Owner phone</label>
+                        <input name="OwnerPhone" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">City</label>
+                        <input name="OwnerCity" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">State / Emirate</label>
+                        <input name="OwnerState" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Email</label>
+                        <input name="OwnerEmail" type="email" class="form-control">
+                    </div>
+
+                    <!-- Building -->
+                    <div class="col-md-6">
+                        <label class="form-label">Building name *</label>
+                        <input name="BuildingName" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Address</label>
+                        <input name="BuildingAddress" class="form-control">
+                    </div>
+                </form>
+                <div id="quickAddErr" class="text-danger mt-2"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="quickAddSave">
+                    <i class="bi bi-save"></i> Save
+                </button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        /* === Auto‑fill owner info === */
+        $('#buildingSelector').on('change', function () {
+            const id = $(this).val();
+            if (!id) return $('#ownerName,#ownerPhone,#buildingAddress').text('');
+            $.get('/Buildings/GetBuildingInfo', { id }, d => {
+                $('#ownerName').text(d.ownerName);
+                $('#ownerPhone').text(d.ownerPhone);
+                $('#buildingAddress').text(d.address);
+            });
+        });
+
+        /* === Save new building & owner === */
+        $('#quickAddSave').on('click', function () {
+            const data = $('#quickAddForm').serialize();
+            $.post('/Buildings/QuickCreate', data)
+              .done(d => {
+                  // add to dropdown & select
+                  $('#buildingSelector').append(
+                      $('<option>', { value: d.id, text: d.name, selected: true })
+                  ).trigger('change');
+                  $('#quickAddModal').modal('hide');
+                  $('#quickAddForm')[0].reset();
+                  $('#quickAddErr').text('');
+              })
+              .fail(xhr => $('#quickAddErr')
+                    .text(xhr.responseText || 'Unexpected error'));
+        });
+    </script>
+}

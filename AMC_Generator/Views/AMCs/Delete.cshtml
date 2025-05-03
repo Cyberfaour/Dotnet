@@ -1,0 +1,52 @@
+﻿@model AMC_Generator.Models.AMC
+@{
+    ViewData["Title"] = "حذف العقد";
+}
+
+<div class="card shadow-sm text-end">
+    <div class="card-header bg-danger text-white text-center fw-bold">
+        حذف عقد الصيانة
+    </div>
+
+    <div class="card-body">
+        <p class="alert alert-warning text-center">
+            هل أنت متأكد من حذف هذا العقد؟ لا يمكن التراجع عن هذه العملية.
+        </p>
+
+        <dl class="row">
+            <dt class="col-sm-3">رقم المشروع</dt>
+            <dd class="col-sm-9">@Model.ProjectNumber</dd>
+
+            <dt class="col-sm-3">قيمة العقد (د.إ)</dt>
+            <dd class="col-sm-9">@Model.AMCValue.ToString("N2")</dd>
+
+            <dt class="col-sm-3">تاريخ البدء</dt>
+            <dd class="col-sm-9">@Model.StartDate:yyyy/MM/dd</dd>
+
+            <dt class="col-sm-3">تاريخ الانتهاء</dt>
+            <dd class="col-sm-9">@Model.EndDate:yyyy/MM/dd</dd>
+
+            <dt class="col-sm-3">المبنى</dt>
+            <dd class="col-sm-9">@Model.Building?.Name</dd>
+
+            <dt class="col-sm-3">ملف الـ PDF</dt>
+            <dd class="col-sm-9">
+                @if (!string.IsNullOrEmpty(Model.PdfPath))
+                {
+                    <a href="@Model.PdfPath" target="_blank">عرض PDF</a>
+                }
+                else
+                {
+                    <span class="text-muted">—</span>
+                }
+            </dd>
+        </dl>
+
+        <form asp-action="Delete" method="post" class="text-center mt-4">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <button class="btn btn-danger px-4">حذف</button>
+            <a asp-action="Index" class="btn btn-secondary px-4 ms-2">إلغاء</a>
+        </form>
+    </div>
+</div>

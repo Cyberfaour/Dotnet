@@ -1,0 +1,73 @@
+﻿@model AMC_Generator.Models.AMC
+@{
+    ViewData["Title"] = "تفاصيل العقد";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<div class="card shadow-sm text-end">
+    <div class="card-header bg-primary bg-opacity-75 text-white text-center fw-bold">
+        تفاصيل عقد الصيانة
+    </div>
+
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-3"><i class="bi bi-hash"></i> رقم المشروع</dt>
+            <dd class="col-sm-9">@Model.ProjectNumber</dd>
+
+            <dt class="col-sm-3"><i class="bi bi-cash-stack"></i> قيمة العقد</dt>
+            <dd class="col-sm-9">@Model.AMCValue.ToString("N2") د.إ</dd>
+
+            <dt class="col-sm-3"><i class="bi bi-calendar2-check"></i> تاريخ البدء</dt>
+            <dd class="col-sm-9">@Model.StartDate:yyyy/MM/dd</dd>
+
+            <dt class="col-sm-3"><i class="bi bi-calendar2-x"></i> تاريخ الانتهاء</dt>
+            <dd class="col-sm-9">@Model.EndDate:yyyy/MM/dd</dd>
+
+            <dt class="col-sm-3"><i class="bi bi-building"></i> المبنى</dt>
+            <dd class="col-sm-9">@Model.Building?.Name</dd>
+
+            <dt class="col-sm-3"><i class="bi bi-file-earmark-pdf"></i> ملف PDF</dt>
+            <dd class="col-sm-9">
+                @if (!string.IsNullOrWhiteSpace(Model.PdfPath))
+                {
+                    <a href="@Model.PdfPath" target="_blank" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-box-arrow-up-right"></i> عرض / تنزيل
+                    </a>
+                }
+                else
+                {
+                    <span class="text-muted">—</span>
+                }
+            </dd>
+        </dl>
+
+        <hr />
+
+        <div class="text-center">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary me-2">
+                <i class="bi bi-pencil-square"></i> تعديل
+            </a>
+
+            <a asp-action="Details"
+               asp-route-id="@Model.Id"
+               asp-route-regen="true"
+               class="btn btn-outline-secondary me-2">
+                <i class="bi bi-arrow-clockwise"></i> إعادة إنشاء PDF
+            </a>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-list"></i> رجوع للقائمة
+            </a>
+        </div>
+
+        @if (TempData["PdfInfo"] != null)
+        {
+            <div class="alert alert-success mt-3">@TempData["PdfInfo"]</div>
+        }
+        @if (TempData["PdfErr"] != null)
+        {
+            <div class="alert alert-danger mt-3">@TempData["PdfErr"]</div>
+        }
+    </div>
+</div>

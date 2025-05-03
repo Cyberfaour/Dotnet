@@ -1,0 +1,27 @@
+﻿@model AMC_Generator.Models.Building
+@{
+    ViewData["Title"] = "حذف مبنى";
+}
+
+<h2 class="mb-3 text-danger">حذف مبنى</h2>
+
+<h5 class="text-warning">هل أنت متأكد أنك تريد حذف هذا السجل؟</h5>
+
+<div class="border rounded p-3 text-end">
+    <dl class="row">
+        <dt class="col-sm-2">اسم المبنى</dt>
+        <dd class="col-sm-10">@Model.Name</dd>
+
+        <dt class="col-sm-2">العنوان</dt>
+        <dd class="col-sm-10">@Model.Address</dd>
+
+        <dt class="col-sm-2">المالك</dt>
+        <dd class="col-sm-10">@Model.Owner?.FullName</dd>
+    </dl>
+
+    <form asp-action="Delete" class="d-inline">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">حذف</button>
+    </form>
+    <a asp-action="Index" class="btn btn-secondary ms-2">رجوع للقائمة</a>
+</div>

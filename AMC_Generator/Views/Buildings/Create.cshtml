@@ -1,0 +1,49 @@
+﻿@model AMC_Generator.ModelViews.BuildingWithOwnerVM
+@{
+    ViewData["Title"] = "إضافة مبنى والمالك";
+}
+
+<h2 class="mb-3">إضافة مبنى جديد مع بيانات المالك</h2>
+
+<form asp-action="Create" class="row g-3 text-end">
+    <!-- مالك -->
+    <fieldset class="border p-3 rounded">
+        <legend class="float-none w-auto px-2">بيانات المالك</legend>
+
+        <div class="col-md-6">
+            <label asp-for="OwnerFullName" class="form-label"></label>
+            <input asp-for="OwnerFullName" class="form-control" required />
+            <span asp-validation-for="OwnerFullName" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="OwnerPhone" class="form-label"></label>
+            <input asp-for="OwnerPhone" class="form-control" />
+        </div>
+    </fieldset>
+
+    <!-- مبنى -->
+    <fieldset class="border p-3 rounded mt-4">
+        <legend class="float-none w-auto px-2">بيانات المبنى</legend>
+
+        <div class="col-md-6">
+            <label asp-for="BuildingName" class="form-label"></label>
+            <input asp-for="BuildingName" class="form-control" required />
+            <span asp-validation-for="BuildingName" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="BuildingAddress" class="form-label"></label>
+            <input asp-for="BuildingAddress" class="form-control" />
+        </div>
+    </fieldset>
+
+    <div class="col-12 mt-3">
+        <button class="btn btn-success">حفظ</button>
+        <a asp-action="Index" class="btn btn-secondary">إلغاء</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

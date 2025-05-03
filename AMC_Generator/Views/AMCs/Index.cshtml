@@ -1,0 +1,97 @@
+﻿@model IEnumerable<AMC_Generator.Models.AMC>
+@{
+    ViewData["Title"] = "قائمة العقود";
+    var current = (string?)ViewBag.CurrentStatus ?? "All";
+    var search = (string?)ViewBag.Search ?? "";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+@if (ViewBag.PdfErr != null)
+{
+     <div class="alert alert-danger">@ViewBag.PdfErr</div>
+}
+@if (ViewBag.PdfInfo != null)
+{
+     <div class="alert alert-success">@ViewBag.PdfInfo</div>
+}
+
+<h2 class="mb-3">قائمة عقود الصيانة السنوية</h2>
+
+<div class="d-flex justify-content-between flex-wrap gap-2 mb-3">
+
+    <!-- search + filter -->
+    <form method="get" class="d-flex gap-2">
+        <input type="text" name="q" value="@search" class="form-control"
+               placeholder="ابحث برقم المشروع أو اسم المبنى" />
+
+        <select name="status" class="form-select">
+            @foreach (var s in new[] { "All", "Active", "Expiring", "Expired", "Terminated" })
+            {
+                <option value="@s" selected="@(s==current)">@s</option>
+            }
+        </select>
+
+        <button class="btn btn-primary"><i class="bi bi-search"></i></button>
+    </form>
+
+    <a asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-lg"></i> عقد جديد
+    </a>
+</div>
+
+<table class="table table-bordered table-sm text-end align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>رقم المشروع</th>
+            <th>المبنى</th>
+            <th>القيمة (د.إ)</th>
+            <th>البدء</th>
+            <th>الانتهاء</th>
+            <th>الحالة</th>
+            <th>PDF</th>
+            <th style="width:120px"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var a in Model)
+        {
+            var row = a.Status switch
+            {
+                AMC_Generator.Models.AmcStatus.Expired => "table-danger",
+                AMC_Generator.Models.AmcStatus.Expiring => "table-warning",
+                AMC_Generator.Models.AmcStatus.Terminated => "table-secondary",
+                _ => ""
+            };
+            <tr class="@row">
+                <td>@a.ProjectNumber</td>
+                <td>@a.Building?.Name</td>
+                <td>@a.AMCValue:N2</td>
+                <td>@a.StartDate:yyyy-MM-dd</td>
+                <td>@a.EndDate:yyyy-MM-dd</td>
+                <td>@a.Status</td>
+                <td>
+                    @if (!string.IsNullOrWhiteSpace(a.PdfPath))
+                    {
+                        <a href="@a.PdfPath" target="_blank" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                    }
+                </td>
+                <td>
+                    <div class="btn-group">
+                        <a asp-action="Details" asp-route-id="@a.Id"
+                           class="btn btn-sm btn-info"><i class="bi bi-info-circle"></i></a>
+                        <a asp-action="Edit" asp-route-id="@a.Id"
+                           class="btn btn-sm btn-primary"><i class="bi bi-pencil"></i></a>
+                        <form asp-action="Delete" asp-route-id="@a.Id" method="post"
+                              onsubmit="return confirm('حذف العقد؟');">
+                            <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
